@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color:#e0e0e0; 
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: var(--background-color);
+}
+
+.neumo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.neumo-circle {
+    border-radius: 123px;
+    background: #e0e0e0;
+    box-shadow: -24px 24px 38px #bcbcbc,
+                24px -24px 38px #ffffff;
+    width: 16rem;
+    height: 16rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 2rem;
+}
+
+.neumo-circle__concave {
+    border-radius: 123px;
+    background: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset -10px 10px 20px #929292,
+                inset 10px -10px 20px #ffffff;
+    width: 13rem;
+    height: 13rem;
+    transition: box-shadow 0.25s ease-in-out;
+
+}
+
+.neumo-circle__concave:hover {
+    box-shadow: inset -10px 10px 20px #292929,
+    inset 10px -10px 20px #ffffff;
+}
+
+.neumo-circle__concave  p {
+    font-weight: bold;
+    color: #0e0e0e;
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.concave-button-container {
+    border-radius: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background-color);
+    box-shadow: inset -10px 10px 20px #929292,
+                inset 10px -10px 20px #ffffff;
+    padding: 2rem;
+}
+
+.button-group {
+    margin: 0;
+}
+
+.cool-button {
+ position: relative;
+ font-family: inherit;
+ font-weight: 500;
+ font-size: 18px;
+ /* letter-spacing: 0.05em; */
+ border-radius: 0.8rem;
+ border: none;
+ background: linear-gradient(to right, #e2752d, #e03400);
+ color: ghostwhite;
+ overflow: hidden;
+ width: 8rem;
+ cursor: pointer;
+}
+
+
+.cool-button span {
+ position: relative;
+ z-index: 10;
+ transition: color 0.4s;
+ display: inline-flex;
+ align-items: center;
+ padding: 0.8rem 1.2rem 0.8rem 1.05rem;
+}
+
+.cool-button::before,
+.cool-button::after {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ z-index: 0;
+}
+
+.cool-button::before {
+ content: "";
+ background: #0e0e0e;
+ width: 120%;
+ left: -10%;
+ transform: skew(30deg);
+ transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.cool-button:hover::before {
+ transform: translate3d(100%, 0, 0);
+}
+
+.cool-button:active {
+ transform: scale(0.95);
+}
+
+
+@media (max-width: 30rem){
+    .mobile-button-group {
+        display: flex;
+        flex-direction: column;
+        padding: 5%;
+      }
+
+    .cool-button {
+        margin: .4rem;
+    }
+}
