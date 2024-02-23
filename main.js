@@ -1,5 +1,5 @@
-var nCirlce = document.querySelector('.neumo-circle');
-var resumeURL = "resume/resume.html"
+const nCirlce = document.querySelector('.neumo-circle');
+const resumeURL = "resume/resume.html"
 
 nCirlce.addEventListener('click',
     function () {
