@@ -18,8 +18,8 @@
         <div class="resume">
             <div class="resume-container">
                 <div class="name">
-                    <div class="name__item">Carter</div>
-                    <div class="name__item">Craven</div>
+                    <div class="name__item" id="first-name">Carter</div>
+                    <div class="name__item" id="last-name">Craven</div>
                     <div class="location">
                         <div class="location__items">
                             <span>c.craven1337@gmail.com</span>
@@ -125,4 +125,8 @@
             </div>
         </div>
     </main>
+    <script>
+        document.getElementById('first-name').addEventListener('click', () => window.location.assign('../index.html'));
+        document.getElementById('last-name').addEventListener('click', () => window.location.assign('../index.html'));
+    </script>
 </body>
